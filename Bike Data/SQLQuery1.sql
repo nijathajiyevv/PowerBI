@@ -14,9 +14,7 @@ select
 	price,
 	COGS,
 	riders*price as revenue,
-	riders*price - COGS as profit
+	riders*price - COGS*price as profit
 from cte a
 left join cost_table b
 on a.yr = b.yr;
-
-
